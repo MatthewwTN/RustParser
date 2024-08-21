@@ -1,0 +1,21 @@
+data:
+   xvalues : vector,
+   yvalues : vector,
+   a : number,
+   b : number,
+   r : number
+process:
+   a = regressiona(xvalues, yvalues),
+   b = regressionb(xvalues, yvalues),
+   r = correlation(xvalues, yvalues)
+input:
+   xvalues = read("file.csv", false, 0),
+   yvalues = read("file.csv", false, 1)
+output:
+   "value of a = ",
+   a,
+   "value of b = ",
+   b,
+   "value of r = ",
+   r
+end.
